@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anjani Thota — Digital Marketing Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0A0F1E;--navyc:#1A2540;--border:#2A3655;--cyan:#00C9E8;--white:#F8FAFF;--muted:#8B9DC3;--text:#C8D6F0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text);line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,15,30,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:15px;font-weight:700;color:var(--cyan)}
+.navl{display:flex;gap:1.5rem}
+.navl a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+.navl a:hover{color:var(--cyan)}
+.wrap{max-width:900px;margin:0 auto;padding:0 2rem}
+section{padding:5rem 0 3rem}
+#hero{padding-top:7rem;padding-bottom:4rem}
+.hgrid{display:grid;grid-template-columns:1fr 200px;gap:3rem;align-items:start}
+.htag{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--cyan);background:rgba(0,201,232,0.1);border:1px solid rgba(0,201,232,0.25);border-radius:999px;padding:4px 12px;margin-bottom:1rem}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+h1{font-size:clamp(2rem,5vw,2.8rem);font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-.03em;margin-bottom:.5rem}
+h1 span{color:var(--cyan)}
+.tagline{font-size:13px;color:var(--muted);margin-bottom:1rem;line-height:1.7}
+.loc{font-size:13px;color:var(--muted);margin-bottom:1.25rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.loc .sep{color:var(--border)}
+.bio{font-size:15px;color:var(--text);max-width:560px;line-height:1.8;margin-bottom:1.5rem}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.5rem}
+.pill{font-size:12px;padding:4px 12px;border-radius:999px;border:1px solid var(--border);color:var(--muted);background:var(--navyc)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.bp{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;padding:9px 20px;border-radius:8px;background:var(--cyan);color:var(--navy);text-decoration:none;transition:opacity .2s}
+.bp:hover{opacity:.85}
+.bo{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:9px 20px;border-radius:8px;background:transparent;color:var(--cyan);border:1px solid rgba(0,201,232,0.35);text-decoration:none;transition:background .2s}
+.bo:hover{background:rgba(0,201,232,0.07)}
+.bs{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:9px 20px;border-radius:8px;background:transparent;color:var(--muted);border:1px solid var(--border);text-decoration:none;transition:border-color .2s,color .2s}
+.bs:hover{border-color:rgba(0,201,232,.35);color:var(--cyan)}
+.photo-wrap{position:relative}
+.avatar-circle{width:180px;height:180px;border-radius:16px;background:var(--navyc);border:2px solid rgba(0,201,232,0.3);display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:800;color:var(--cyan)}
+.pbadge{position:absolute;bottom:-10px;right:-10px;background:var(--navyc);border:1px solid rgba(0,201,232,.3);border-radius:10px;padding:6px 12px;font-size:11px;font-weight:600;color:var(--cyan);white-space:nowrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-top:3rem}
+.si{background:var(--navyc);padding:1.25rem;text-align:center}
+.sn{font-size:1.8rem;font-weight:800;color:var(--cyan);line-height:1}
+.sl{font-size:11px;color:var(--muted);margin-top:4px}
+.ey{font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.et{font-size:1.5rem;font-weight:700;color:var(--white);letter-spacing:-.02em;margin-bottom:2rem}
+.tl{position:relative}
+.tl::before{content:'';position:absolute;left:19px;top:0;bottom:0;width:1px;background:var(--border)}
+.ei{display:flex;gap:1.5rem;margin-bottom:1.25rem}
+.edw{flex-shrink:0;width:40px;display:flex;align-items:flex-start;justify-content:center;padding-top:4px}
+.ed{width:12px;height:12px;border-radius:50%;background:var(--border);border:2px solid var(--navy);flex-shrink:0}
+.ed.active{background:var(--cyan);box-shadow:0 0 0 4px rgba(0,201,232,.15)}
+.ec{flex:1;background:var(--navyc);border:1px solid var(--border);border-radius:12px;padding:1.15rem 1.4rem;transition:border-color .2s}
+.ec:hover{border-color:rgba(0,201,232,.25)}
+.ec.ft{border-color:rgba(0,201,232,.35)}
+.eh{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.er{font-size:15px;font-weight:600;color:var(--white)}
+.eb{font-size:11px;padding:2px 10px;border-radius:999px;background:rgba(0,201,232,.12);color:var(--cyan);border:1px solid rgba(0,201,232,.25)}
+.eyb{font-size:11px;padding:2px 10px;border-radius:999px;background:rgba(255,200,50,.1);color:#FFC832;border:1px solid rgba(255,200,50,.25)}
+.eco{font-size:13px;color:var(--cyan);margin-top:2px}
+.em{font-size:12px;color:var(--muted);margin-top:3px}
+.ed2{font-size:13px;color:var(--text);margin-top:9px;line-height:1.7}
+.esk{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.esk span{font-size:11px;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.skc{background:var(--navyc);border:1px solid var(--border);border-radius:12px;padding:1.15rem;transition:border-color .2s,transform .2s}
+.skc:hover{border-color:rgba(0,201,232,.3);transform:translateY(-2px)}
+.ski{font-size:1.3rem;margin-bottom:7px}
+.skn{font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px}
+.skl{font-size:11px;color:var(--muted);margin-bottom:9px}
+.sbb{height:3px;background:var(--border);border-radius:2px}
+.sb{height:3px;border-radius:2px;background:var(--cyan)}
+.spc{background:var(--navyc);border:1px solid var(--border);border-radius:12px;padding:1.4rem;margin-bottom:10px;display:flex;align-items:flex-start;gap:1rem}
+.spi{width:44px;height:44px;border-radius:10px;background:rgba(0,201,232,.1);border:1px solid rgba(0,201,232,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.spt{font-size:15px;font-weight:600;color:var(--white)}
+.spd{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.6}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.cc{background:var(--navyc);border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;gap:12px;align-items:flex-start}
+.ci{width:40px;height:40px;border-radius:10px;background:rgba(0,201,232,.1);border:1px solid rgba(0,201,232,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.cn{font-size:14px;font-weight:600;color:var(--white)}
+.cis{font-size:12px;color:var(--muted);margin-top:3px}
+.educ{background:var(--navyc);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;margin-bottom:10px;display:flex;gap:1rem;align-items:flex-start}
+.deg{font-size:15px;font-weight:600;color:var(--white)}
+.sch{font-size:13px;color:var(--cyan);margin-top:2px}
+.emeta{font-size:12px;color:var(--muted);margin-top:3px}
+.cbox{background:var(--navyc);border:1px solid rgba(0,201,232,.25);border-radius:16px;padding:3rem 2.5rem;text-align:center}
+.cbox h2{font-size:1.8rem;font-weight:700;color:var(--white);margin-bottom:.75rem}
+.cbox p{font-size:15px;color:var(--muted);max-width:480px;margin:0 auto 1.75rem;line-height:1.7}
+.citems{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:1.75rem}
+.cit{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:8px 16px}
+footer{border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;font-size:12px;color:var(--muted)}
+@media(max-width:650px){.hgrid{grid-template-columns:1fr}.photo-wrap{display:none}.stats{grid-template-columns:1fr 1fr}.navl{display:none}.tl::before{left:15px}.edw{width:32px}.cbox{padding:2rem 1.25rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Anjani Thota</div>
+  <div class="navl">
+    <a href="#hero">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<section id="hero">
+  <div class="hgrid">
+    <div>
+      <div class="htag"><span class="dot"></span> Currently at QTOP Global Services</div>
+      <h1>Anjani<br><span>Thota</span></h1>
+      <div class="tagline">Digital Marketing Manager · Social Media &amp; Content Strategist<br>Meta &amp; Google Ads Expert · Healthcare &amp; Hospital Branding</div>
+      <div class="loc">
+        <span>📍 Rajahmundry, Andhra Pradesh</span><span class="sep">·</span>
+        <span>He/Him</span><span class="sep">·</span>
+        <span>1,306 Followers</span>
+      </div>
+      <p class="bio">Results-driven Digital Marketing Manager with 11+ years of combined experience across healthcare, telecom, and digital sectors. Specialized in creating high-impact online presences for doctors, clinics, and multi-specialty hospitals — driving patient acquisition through Google Ads, SEO, and Social Media strategies.</p>
+      <div class="pills">
+        <span class="pill">🎯 Google Ads</span>
+        <span class="pill">📱 Social Media Marketing</span>
+        <span class="pill">🔍 SEO</span>
+        <span class="pill">🏥 Healthcare Branding</span>
+        <span class="pill">✍️ Content Writing</span>
+        <span class="pill">📧 Email Marketing</span>
+        <span class="pill">🤝 Lead Generation</span>
+      </div>
+      <div class="btns">
+        <a class="bp" href="mailto:anjanithotaa@gmail.com">✉️ anjanithotaa@gmail.com</a>
+        <a class="bo" href="tel:+919703322559">📞 +91 97033 22559</a>
+        <a class="bs" href="https://www.facebook.com/thota.anjani" target="_blank">Facebook</a>
+        <a class="bs" href="https://www.instagram.com/_anji.babu_/" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <div class="avatar-circle">AT</div>
+      <div class="pbadge">✅ Available</div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="si"><div class="sn">11+</div><div class="sl">Years Experience</div></div>
+    <div class="si"><div class="sn">6</div><div class="sl">Companies</div></div>
+    <div class="si"><div class="sn">1,306</div><div class="sl">LinkedIn Followers</div></div>
+    <div class="si"><div class="sn">8+</div><div class="sl">Core Skills</div></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="ey">Career Journey</div>
+  <div class="et">Work Experience</div>
+  <div class="tl">
+
+    <div class="ei">
+      <div class="edw"><div class="ed active"></div></div>
+      <div class="ec ft">
+        <div class="eh"><div class="er">Digital Marketing Manager</div><span class="eb">● Current</span></div>
+        <div class="eco">QTOP Global Services · Full-time</div>
+        <div class="em">📅 Aug 2025 – Present · 11 months &nbsp;|&nbsp; 📍 Rajahmundry, On-site</div>
+        <div class="ed2">Creating high-impact digital presences for doctors, clinics, and multi-specialty hospitals. Driving patient acquisition through targeted Google Ads, Social Media campaigns, and healthcare-specific content strategies.</div>
+        <div class="esk"><span>Google Ads</span><span>Social Media Marketing</span><span>Healthcare Branding</span><span>Content Strategy</span></div>
+      </div>
+    </div>
+
+    <div class="ei">
+      <div class="edw"><div class="ed"></div></div>
+      <div class="ec">
+        <div class="eh"><div class="er">Digital Marketing Specialist</div></div>
+        <div class="eco">TheRiseUp Solutions</div>
+        <div class="em">📅 Apr 2024 – Sep 2024 · 6 months &nbsp;|&nbsp; 📍 India</div>
+        <div class="ed2">Drove digital campaigns, SEO content writing for client blogs (theriseupsolutions.com &amp; harishhub.com), SEM, Google Ads, and Social Media Marketing.</div>
+        <div class="esk"><span>Content Writing</span><span>Facebook Marketing</span><span>Google Ads</span><span>SEM</span><span>SEMrush</span></div>
+      </div>
+    </div>
+
+    <div class="ei">
+      <div class="edw"><div class="ed"></div></div>
+      <div class="ec">
+        <div class="eh"><div class="er">Digital Marketing Executive</div></div>
+        <div class="eco">ONS Solutions · Full-time</div>
+        <div class="em">📅 Oct 2021 – Dec 2022 · 1 yr 3 months &nbsp;|&nbsp; 📍 Hyderabad</div>
+        <div class="ed2">Used web analytics tools to evaluate website traffic and boost marketing efforts. Managed email marketing, social media, and display ads while assessing new digital technologies.</div>
+        <div class="esk"><span>Web Analytics</span><span>Email Marketing</span><span>Social Media Ads</span><span>Display Ads</span></div>
+      </div>
+    </div>
+
+    <div class="ei">
+      <div class="edw"><div class="ed"></div></div>
+      <div class="ec">
+        <div class="eh"><div class="er">SEO Executive</div><span class="eyb">Apprenticeship</span></div>
+        <div class="eco">Creative Crewz</div>
+        <div class="em">📅 Jun 2019 – Aug 2019 · 3 months &nbsp;|&nbsp; 📍 Hyderabad, On-site</div>
+        <div class="ed2">Hands-on training in SEO, SMM, Google Ads, Email Marketing, and Lead Generation fundamentals.</div>
+        <div class="esk"><span>SEO</span><span>SMM</span><span>Google Ads</span><span>Lead Generation</span></div>
+      </div>
+    </div>
+
+    <div class="ei">
+      <div class="edw"><div class="ed"></div></div>
+      <div class="ec">
+        <div class="eh"><div class="er">Customer Service Representative</div></div>
+        <div class="eco">QConneqt — Tata Business Support Services · Full-time</div>
+        <div class="em">📅 Dec 2014 – Jun 2019 · 4 yrs 6 months &nbsp;|&nbsp; 📍 Hyderabad, On-site</div>
+        <div class="ed2">Outbound sales specialist presenting 1-year promotional packages. Consistently generated up to 30 leads per day through persuasive communication and value-driven selling.</div>
+        <div class="esk"><span>Lead Generation</span><span>Inside Sales</span><span>Objection Handling</span><span>Customer Engagement</span></div>
+      </div>
+    </div>
+
+    <div class="ei">
+      <div class="edw"><div class="ed"></div></div>
+      <div class="ec">
+        <div class="eh"><div class="er">Customer Care Executive</div></div>
+        <div class="eco">Vajja Technologies Pvt. Ltd. · Full-time</div>
+        <div class="em">📅 May 2011 – May 2012 · 1 yr 1 month &nbsp;|&nbsp; 📍 Hyderabad, On-site</div>
+        <div class="ed2">Telecom specialist focused on Mobile Number Portability (MNP) — educating customers on network switching benefits and driving conversions through consultative calling.</div>
+        <div class="esk"><span>Customer Retention</span><span>Telecom</span><span>MNP</span><span>Outbound Calling</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="specializations">
+  <div class="ey">What I Do Best</div>
+  <div class="et">Specializations</div>
+  <div class="spc"><div class="spi">🏥</div><div><div class="spt">Healthcare Digital Marketing</div><div class="spd">Building digital strategies for doctors, clinics &amp; hospitals — Google My Business, patient acquisition ads, and trust-building content tailored to healthcare audiences.</div></div></div>
+  <div class="spc"><div class="spi">📢</div><div><div class="spt">Paid Advertising — Meta &amp; Google</div><div class="spd">Running high-ROI Google Ads &amp; Facebook/Instagram campaigns with targeted audience segmentation, conversion tracking, and budget optimization.</div></div></div>
+  <div class="spc"><div class="spi">✍️</div><div><div class="spt">Content Writing &amp; Brand Storytelling</div><div class="spd">Crafting SEO-optimized blog content, social media copy, and brand narratives that engage audiences and build lasting online presence.</div></div></div>
+  <div class="spc"><div class="spi">🔍</div><div><div class="spt">SEO &amp; Organic Growth</div><div class="spd">On-page and off-page SEO using SEMrush, Google Analytics, and Moz to improve rankings and drive qualified organic traffic.</div></div></div>
+</section>
+
+<section id="skills">
+  <div class="ey">Expertise</div>
+  <div class="et">Core Skills</div>
+  <div class="sgrid">
+    <div class="skc"><div class="ski">🎯</div><div class="skn">Google Ads</div><div class="skl">Expert</div><div class="sbb"><div class="sb" style="width:92%"></div></div></div>
+    <div class="skc"><div class="ski">📱</div><div class="skn">Social Media Marketing</div><div class="skl">Expert</div><div class="sbb"><div class="sb" style="width:90%"></div></div></div>
+    <div class="skc"><div class="ski">🔍</div><div class="skn">SEO</div><div class="skl">Advanced</div><div class="sbb"><div class="sb" style="width:85%"></div></div></div>
+    <div class="skc"><div class="ski">✍️</div><div class="skn">Content Writing</div><div class="skl">Advanced</div><div class="sbb"><div class="sb" style="width:82%"></div></div></div>
+    <div class="skc"><div class="ski">📧</div><div class="skn">Email Marketing</div><div class="skl">Advanced</div><div class="sbb"><div class="sb" style="width:80%"></div></div></div>
+    <div class="skc"><div class="ski">🤝</div><div class="skn">Lead Generation</div><div class="skl">Expert</div><div class="sbb"><div class="sb" style="width:88%"></div></div></div>
+    <div class="skc"><div class="ski">📊</div><div class="skn">Google Analytics</div><div class="skl">Advanced</div><div class="sbb"><div class="sb" style="width:78%"></div></div></div>
+    <div class="skc"><div class="ski">🛠️</div><div class="skn">SEMrush &amp; Moz</div><div class="skl">Intermediate</div><div class="sbb"><div class="sb" style="width:72%"></div></div></div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="ey">Credentials</div>
+  <div class="et">Certifications</div>
+  <div class="cgrid">
+    <div class="cc"><div class="ci">🎓</div><div><div class="cn">SEO Career Kickstarter</div><div class="cis">Professional Certification</div></div></div>
+    <div class="cc"><div class="ci">🎯</div><div><div class="cn">Google Ads Creative Certification</div><div class="cis">Google</div></div></div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="ey">Academic Background</div>
+  <div class="et">Education</div>
+  <div class="educ"><div style="font-size:1.4rem">🎓</div><div><div class="deg">B.Com (Open Degree)</div><div class="sch">Acharya Nagarjuna University</div><div class="emeta">📅 Completed March 2023</div></div></div>
+  <div class="educ"><div style="font-size:1.4rem">📚</div><div><div class="deg">Intermediate — MPC</div><div class="sch">Board of Intermediate Education</div><div class="emeta">📅 2005 · Math, Physics &amp; Chemistry · 62%</div></div></div>
+  <div class="educ"><div style="font-size:1.4rem">🏫</div><div><div class="deg">S.S.C</div><div class="sch">School of Secondary Education</div><div class="emeta">📅 2002 · 68%</div></div></div>
+</section>
+
+<section id="contact" style="padding-bottom:5rem">
+  <div class="cbox">
+    <h2>Let's Work Together</h2>
+    <p>Looking for a results-driven Digital Marketing Manager with deep expertise in healthcare, Google Ads, and social media? Let's connect!</p>
+    <div class="citems">
+      <div class="cit">✉️ anjanithotaa@gmail.com</div>
+      <div class="cit">📞 +91 97033 22559</div>
+      <div class="cit">📍 Rajahmundry, Andhra Pradesh</div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
+      <a class="bp" href="mailto:anjanithotaa@gmail.com">✉️ Send Email</a>
+      <a class="bo" href="tel:+919703322559">📞 Call Now</a>
+      <a class="bs" href="https://www.facebook.com/thota.anjani" target="_blank">Facebook</a>
+      <a class="bs" href="https://www.instagram.com/_anji.babu_/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</section>
+
+</div>
+<footer><p>© 2026 Anjani Thota · Digital Marketing Manager · Rajahmundry, Andhra Pradesh, India</p></footer>
+</body>
+</html>
