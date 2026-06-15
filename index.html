@@ -4,1031 +4,972 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anjani Thota — Digital Marketing Manager</title>
-<meta name="description" content="Results-driven Digital Marketing Manager with 11+ years of experience in healthcare branding, Google Ads, SEO, and Social Media Marketing. Based in Rajahmundry, Andhra Pradesh.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --border:#e5e7eb;--gray:#6b7280;--light:#f3f4f6;
+  --muted:#9ca3af;--text:#111;--white:#fff;
+  --radius:12px;--radius-pill:50px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:#111;line-height:1.6}
 
-  :root {
-    --white: #ffffff;
-    --off-white: #f8f8f6;
-    --border: #e8e8e4;
-    --border-light: #f0f0ec;
-    --text-primary: #0f0f0e;
-    --text-secondary: #5a5a55;
-    --text-muted: #9a9a94;
-    --accent: #1a1a1a;
-    --green: #2d6a4f;
-    --green-bg: #eaf4ef;
-    --blue: #1a3d6b;
-    --blue-bg: #edf2fb;
-    --radius: 12px;
-    --radius-sm: 8px;
-  }
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;z-index:100;
+  background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2.5rem;height:60px;
+}
+.nav-brand{font-size:0.95rem;font-weight:600;color:#111;text-decoration:none}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{
+  text-decoration:none;color:var(--gray);font-size:0.875rem;font-weight:500;
+  padding:0.45rem 1rem;border-radius:8px;transition:all 0.15s;
+}
+.nav-links a:hover{color:#111;background:var(--light)}
+.nav-links a.active{color:#111;font-weight:700}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* PAGE SWITCH */
+.page{display:none}
+.page.active{display:block}
 
-  html { scroll-behavior: smooth; }
+/* BUTTONS */
+.btn-dark{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#111;color:#fff;padding:0.65rem 1.4rem;
+  border-radius:9px;font-size:0.875rem;font-weight:600;
+  text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s;
+}
+.btn-dark:hover{opacity:0.82}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#fff;color:#111;padding:0.65rem 1.4rem;
+  border-radius:9px;font-size:0.875rem;font-weight:600;
+  text-decoration:none;border:1.5px solid var(--border);cursor:pointer;transition:background 0.15s;
+}
+.btn-outline:hover{background:var(--light)}
+.btn-white{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#fff;color:#111;padding:0.65rem 1.4rem;
+  border-radius:9px;font-size:0.875rem;font-weight:600;
+  text-decoration:none;transition:opacity 0.15s;
+}
+.btn-white:hover{opacity:0.88}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:7px;
+  background:transparent;color:#fff;padding:0.65rem 1.4rem;
+  border-radius:9px;font-size:0.875rem;font-weight:600;
+  text-decoration:none;border:1px solid rgba(255,255,255,0.22);
+  transition:background 0.15s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.08)}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--white);
-    color: var(--text-primary);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+/* SECTION COMMONS */
+.section{padding:4.5rem 2.5rem;max-width:1080px;margin:0 auto}
+.eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem}
+.sec-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.025em;color:#111;margin-bottom:0.6rem}
+.sec-sub{font-size:0.93rem;color:var(--gray);max-width:500px;margin-bottom:2.5rem}
+.divider{height:1px;background:var(--border);max-width:1080px;margin:0 auto}
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-light);
-    z-index: 100;
-    padding: 0 2rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 56px;
-  }
-  .nav-logo {
-    font-size: 15px; font-weight: 500; color: var(--text-primary);
-    text-decoration: none; letter-spacing: -0.01em;
-  }
-  .nav-links {
-    display: flex; gap: 2rem; list-style: none;
-  }
-  .nav-links a {
-    font-size: 13px; color: var(--text-secondary);
-    text-decoration: none; transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--text-primary); }
+/* ═══════════ HOME PAGE ═══════════ */
 
-  /* MAIN LAYOUT */
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
+/* TAGLINE HERO */
+.home-hero{
+  padding:8rem 2.5rem 4.5rem;
+  max-width:900px;margin:0 auto;
+}
+.avail-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid var(--border);border-radius:var(--radius-pill);
+  padding:0.28rem 0.9rem;font-size:0.8rem;color:#374151;
+  margin-bottom:2rem;background:#fafafa;font-weight:500;
+}
+.avail-dot{width:7px;height:7px;border-radius:50%;background:#16a34a}
+.home-hero h1{
+  font-size:clamp(2.6rem,5.5vw,4rem);font-weight:800;
+  line-height:1.08;letter-spacing:-0.03em;color:#111;
+  margin-bottom:1.25rem;
+}
+.home-hero h1 em{color:var(--muted);font-weight:400;font-style:italic}
+.home-hero .lead{
+  font-size:1.05rem;color:var(--gray);max-width:580px;
+  margin-bottom:2rem;line-height:1.75;
+}
+.home-cta-row{display:flex;gap:0.75rem;flex-wrap:wrap}
 
-  /* SECTION ANIMATIONS */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.65s ease, transform 0.65s ease;
-  }
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .fade-up:nth-child(2) { transition-delay: 0.08s; }
-  .fade-up:nth-child(3) { transition-delay: 0.14s; }
-  .fade-up:nth-child(4) { transition-delay: 0.2s; }
+/* SERVICES */
+.svc-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+}
+.svc-card{
+  padding:1.75rem;background:#fff;
+  border-right:1px solid var(--border);border-bottom:1px solid var(--border);
+  transition:background 0.15s;
+}
+.svc-card:hover{background:#fafafa}
+.svc-icon{font-size:1.4rem;margin-bottom:0.85rem}
+.svc-card h3{font-size:0.92rem;font-weight:700;color:#111;margin-bottom:0.4rem}
+.svc-card p{font-size:0.82rem;color:var(--gray);line-height:1.65}
 
-  /* HERO */
-  #hero {
-    padding: 120px 0 64px;
-    border-bottom: 1px solid var(--border);
-  }
-  .available-badge {
-    display: inline-flex; align-items: center; gap: 7px;
-    font-size: 12px; font-weight: 500;
-    color: var(--green);
-    background: var(--green-bg);
-    padding: 5px 12px; border-radius: 999px;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.01em;
-  }
-  .badge-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--green);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.85); }
-  }
-  .hero-name {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(36px, 6vw, 52px);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    color: var(--text-primary);
-    margin-bottom: 0.75rem;
-  }
-  .hero-name em {
-    font-style: normal;
-    color: var(--text-secondary);
-  }
-  .hero-role {
-    font-size: 15px;
-    color: var(--text-secondary);
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
-  }
-  .hero-bio {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.75;
-    max-width: 600px;
-    margin-bottom: 1.75rem;
-  }
-  .tag-row {
-    display: flex; flex-wrap: wrap; gap: 6px;
-    margin-bottom: 1.75rem;
-  }
-  .tag {
-    font-size: 12px;
-    padding: 5px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    background: var(--off-white);
-    transition: all 0.2s;
-    cursor: default;
-  }
-  .tag:hover {
-    border-color: var(--text-primary);
-    color: var(--text-primary);
-    background: var(--white);
-  }
-  .cta-row {
-    display: flex; gap: 10px; flex-wrap: wrap;
-    align-items: center;
-  }
-  .btn-dark {
-    font-size: 13px; font-weight: 500;
-    padding: 9px 20px;
-    border-radius: var(--radius-sm);
-    background: var(--text-primary);
-    color: var(--white);
-    text-decoration: none;
-    border: 1px solid var(--text-primary);
-    transition: all 0.2s;
-    display: inline-flex; align-items: center; gap: 7px;
-  }
-  .btn-dark:hover { background: #333; border-color: #333; }
-  .btn-outline {
-    font-size: 13px; font-weight: 500;
-    padding: 9px 20px;
-    border-radius: var(--radius-sm);
-    background: transparent;
-    color: var(--text-primary);
-    text-decoration: none;
-    border: 1px solid var(--border);
-    transition: all 0.2s;
-    display: inline-flex; align-items: center; gap: 7px;
-  }
-  .btn-outline:hover { border-color: var(--text-primary); background: var(--off-white); }
-  .social-row {
-    display: flex; gap: 8px;
-  }
-  .social-btn {
-    width: 36px; height: 36px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 14px;
-    transition: all 0.2s;
-    background: var(--white);
-  }
-  .social-btn:hover { border-color: var(--text-primary); color: var(--text-primary); }
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem}
+.testi-card{
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem;background:#fafafa;
+}
+.stars{color:#f59e0b;font-size:0.78rem;letter-spacing:2px;margin-bottom:0.8rem}
+.testi-text{font-size:0.86rem;color:#374151;line-height:1.72;margin-bottom:1.2rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-av{
+  width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.72rem;font-weight:700;
+  background:var(--light);color:#374151;border:1px solid var(--border);flex-shrink:0;
+}
+.testi-name{font-size:0.82rem;font-weight:700;color:#111}
+.testi-role{font-size:0.73rem;color:var(--muted)}
 
-  /* STATS */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin: 2.5rem 0;
-  }
-  .stat {
-    background: var(--white);
-    padding: 1.25rem 1rem;
-    text-align: center;
-  }
-  .stat-num {
-    font-family: 'Inter', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--text-primary);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .stat-label {
-    font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 0.02em;
-  }
+/* ═══════════ EXPERIENCE PAGE ═══════════ */
+.exp-wrap{padding-top:60px}
+.exp-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:2rem}
+.exp-card{
+  background:#fff;padding:1.75rem 2rem;border-bottom:1px solid var(--border);
+  transition:background 0.15s;
+}
+.exp-card:last-child{border-bottom:none}
+.exp-card:hover{background:#fafafa}
+.exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem}
+.exp-role{font-size:1rem;font-weight:700;color:#111}
+.exp-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:#f0fdf4;border:1px solid #bbf7d0;color:#16a34a;
+  font-size:0.7rem;font-weight:600;padding:0.18rem 0.6rem;border-radius:50px;
+  flex-shrink:0;
+}
+.exp-company{font-size:0.87rem;font-weight:600;color:#374151;margin-bottom:0.25rem}
+.exp-meta{font-size:0.78rem;color:var(--muted);margin-bottom:0.75rem}
+.exp-desc{font-size:0.84rem;color:var(--gray);line-height:1.7;margin-bottom:0.85rem}
+.exp-tags{display:flex;flex-wrap:wrap;gap:6px}
+.exp-tag{
+  font-size:0.72rem;font-weight:500;color:#374151;
+  background:var(--light);border:1px solid var(--border);
+  border-radius:6px;padding:0.18rem 0.55rem;
+}
 
-  /* SECTION COMMON */
-  section {
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  section:last-child { border-bottom: none; }
-  .section-eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-  }
+/* ═══════════ SKILLS PAGE ═══════════ */
+.skills-wrap{padding-top:60px}
+.skills-block{margin-bottom:2.5rem}
+.skills-block-title{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.skill-bars{display:flex;flex-direction:column;gap:0.85rem}
+.skill-row{display:grid;grid-template-columns:160px 1fr 48px;align-items:center;gap:0.75rem}
+.skill-name{font-size:0.84rem;font-weight:600;color:#374151}
+.skill-bar-bg{height:6px;background:var(--light);border-radius:50px;overflow:hidden}
+.skill-bar-fill{height:100%;border-radius:50px;background:#111}
+.skill-pct{font-size:0.75rem;color:var(--muted);font-weight:600;text-align:right}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.5rem}
+.cert-card{
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;
+}
+.cert-icon{font-size:1.6rem;flex-shrink:0}
+.cert-name{font-size:0.87rem;font-weight:700;color:#111}
+.cert-body{font-size:0.76rem;color:var(--muted);margin-top:2px}
 
-  /* EXPERIENCE */
-  .exp-list { display: flex; flex-direction: column; gap: 0; }
-  .exp-item {
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    gap: 16px;
-    padding-bottom: 1.75rem;
-    margin-bottom: 1.75rem;
-    border-bottom: 1px solid var(--border-light);
-    position: relative;
-  }
-  .exp-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
-  .exp-timeline {
-    display: flex; flex-direction: column; align-items: center; padding-top: 4px;
-  }
-  .exp-dot {
-    width: 9px; height: 9px;
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    background: var(--white);
-    flex-shrink: 0;
-    transition: all 0.3s;
-  }
-  .exp-dot.current {
-    border-color: var(--green);
-    background: var(--green);
-  }
-  .exp-line {
-    width: 1px;
-    flex: 1;
-    background: var(--border-light);
-    margin-top: 6px;
-  }
-  .exp-content {}
-  .exp-header {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    margin-bottom: 4px; flex-wrap: wrap; gap: 4px;
-  }
-  .exp-title {
-    font-size: 14px; font-weight: 500;
-    color: var(--text-primary);
-  }
-  .exp-current-badge {
-    font-size: 10px; font-weight: 500;
-    background: var(--green-bg); color: var(--green);
-    padding: 2px 8px; border-radius: 999px;
-    flex-shrink: 0;
-  }
-  .exp-company {
-    font-size: 13px; color: var(--text-secondary);
-    margin-bottom: 3px;
-  }
-  .exp-date {
-    font-size: 12px; color: var(--text-muted);
-    margin-bottom: 10px;
-  }
-  .exp-desc {
-    font-size: 13px; color: var(--text-secondary);
-    line-height: 1.65;
-    margin-bottom: 10px;
-  }
-  .chip-row { display: flex; flex-wrap: wrap; gap: 5px; }
-  .chip {
-    font-size: 11px;
-    padding: 3px 9px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    background: var(--off-white);
-  }
+/* ═══════════ EDUCATION PAGE ═══════════ */
+.edu-wrap{padding-top:60px}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:2rem}
+.edu-card{
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.75rem;background:#fafafa;
+}
+.edu-icon{font-size:1.6rem;margin-bottom:0.75rem}
+.edu-degree{font-size:0.95rem;font-weight:700;color:#111;margin-bottom:0.2rem}
+.edu-inst{font-size:0.84rem;font-weight:600;color:#374151;margin-bottom:0.25rem}
+.edu-year{font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem}
+.edu-detail{font-size:0.8rem;color:var(--gray);line-height:1.6}
 
-  /* SKILLS */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .skill-card {
-    background: var(--off-white);
-    border-radius: var(--radius-sm);
-    padding: 14px 16px;
-    border: 1px solid var(--border-light);
-    transition: border-color 0.2s;
-  }
-  .skill-card:hover { border-color: var(--border); }
-  .skill-header {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 10px;
-  }
-  .skill-name { font-size: 13px; font-weight: 500; color: var(--text-primary); }
-  .skill-level { font-size: 11px; color: var(--text-muted); }
-  .skill-bar {
-    height: 3px;
-    background: var(--border);
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .skill-fill {
-    height: 100%;
-    border-radius: 999px;
-    background: var(--text-primary);
-    width: 0;
-    transition: width 1.1s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+/* ═══════════ CONTACT PAGE ═══════════ */
+.contact-wrap{padding-top:60px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.75rem;display:flex;flex-direction:column;gap:0.5rem;
+  transition:background 0.15s;
+}
+.contact-card:hover{background:#fafafa}
+.contact-card a{text-decoration:none;color:inherit}
+.c-icon{font-size:1.5rem}
+.c-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.c-value{font-size:0.95rem;font-weight:600;color:#111}
+.c-action{font-size:0.8rem;color:var(--gray);margin-top:2px}
+.contact-form-box{
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:2rem;max-width:560px;margin-top:3rem;
+}
+.contact-form-box h3{font-size:1rem;font-weight:700;margin-bottom:1.25rem}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:0.78rem;font-weight:600;color:#374151;margin-bottom:0.35rem}
+.form-group input,.form-group textarea{
+  width:100%;padding:0.6rem 0.85rem;
+  border:1px solid var(--border);border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:0.875rem;color:#111;
+  background:#fff;outline:none;transition:border-color 0.15s;resize:vertical;
+}
+.form-group input:focus,.form-group textarea:focus{border-color:#9ca3af}
+.form-group textarea{min-height:110px}
 
-  /* SPECIALIZATIONS */
-  .spec-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .spec-card {
-    padding: 1.25rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--white);
-    transition: all 0.2s;
-  }
-  .spec-card:hover {
-    background: var(--off-white);
-    border-color: var(--text-primary);
-  }
-  .spec-icon {
-    font-size: 22px;
-    margin-bottom: 10px;
-    display: block;
-  }
-  .spec-title {
-    font-size: 13px; font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-    line-height: 1.3;
-  }
-  .spec-desc {
-    font-size: 12px;
-    color: var(--text-secondary);
-    line-height: 1.55;
-  }
+/* HOME BOTTOM CTA STRIP */
+.cta-strip{
+  background:#111;border-radius:var(--radius);
+  padding:3rem 2.5rem;text-align:center;
+  max-width:1080px;margin:0 auto 5rem;
+}
+.cta-strip h2{font-size:1.75rem;font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:0.55rem}
+.cta-strip p{color:var(--muted);font-size:0.93rem;margin-bottom:1.75rem}
+.cta-strip .row{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
 
-  /* CERTIFICATIONS */
-  .cert-list { display: flex; flex-direction: column; gap: 10px; }
-  .cert-item {
-    display: flex; align-items: center; gap: 14px;
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    background: var(--white);
-    transition: border-color 0.2s;
-  }
-  .cert-item:hover { border-color: var(--text-primary); }
-  .cert-icon {
-    width: 36px; height: 36px;
-    border-radius: var(--radius-sm);
-    background: var(--blue-bg);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-  .cert-name { font-size: 13px; font-weight: 500; color: var(--text-primary); }
-  .cert-issuer { font-size: 12px; color: var(--text-muted); }
+/* ═══════════ ABOUT PAGE ═══════════ */
+.about-wrap{padding-top:60px}
 
-  /* EDUCATION */
-  .edu-list { display: flex; flex-direction: column; gap: 10px; }
-  .edu-item {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 14px 16px;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-sm);
-    background: var(--off-white);
-  }
-  .edu-icon {
-    width: 36px; height: 36px;
-    border-radius: var(--radius-sm);
-    background: var(--white);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px; flex-shrink: 0;
-  }
-  .edu-degree { font-size: 13px; font-weight: 500; color: var(--text-primary); }
-  .edu-school { font-size: 12px; color: var(--text-secondary); }
-  .edu-year { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+/* ABOUT TOP: photo + fresh bio */
+.about-top{
+  max-width:1080px;margin:0 auto;
+  padding:4rem 2.5rem 3.5rem;
+  display:grid;grid-template-columns:210px 1fr;gap:3.5rem;align-items:start;
+}
+@media(max-width:680px){
+  .about-top{grid-template-columns:1fr;gap:2rem}
+  nav{padding:0 1rem}
+  .nav-links a{padding:0.4rem 0.65rem;font-size:0.8rem}
+}
 
-  /* CONTACT */
-  #contact { padding-bottom: 4rem; }
-  .contact-heading {
-    font-family: 'Inter', sans-serif;
-    font-size: 28px; font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-  }
-  .contact-sub {
-    font-size: 14px; color: var(--text-secondary);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-  .contact-card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  .contact-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--border-light);
-    font-size: 13px;
-    transition: background 0.15s;
-  }
-  .contact-row:last-child { border-bottom: none; }
-  .contact-row:hover { background: var(--off-white); }
-  .contact-label {
-    display: flex; align-items: center; gap: 10px;
-    color: var(--text-secondary);
-    font-size: 13px;
-  }
-  .contact-label span { font-size: 15px; }
-  .contact-val {
-    color: var(--text-primary);
-    font-size: 13px;
-    text-decoration: none;
-  }
-  .contact-val:hover { text-decoration: underline; }
-  .contact-cta {
-    display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap;
-  }
+/* Photo placeholder — matches existing site card aesthetic */
+.photo-box{
+  width:200px;height:240px;
+  border:1px solid var(--border);border-radius:16px;background:#f9fafb;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0.55rem;position:relative;overflow:hidden;
+}
+.photo-initials{
+  width:70px;height:70px;border-radius:50%;
+  background:#111;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.35rem;font-weight:800;
+}
+.photo-name-label{font-size:0.78rem;font-weight:600;color:#374151;text-align:center;line-height:1.4}
+.photo-sub-label{font-size:0.7rem;color:var(--muted);text-align:center}
+.photo-status{
+  position:absolute;bottom:0.85rem;
+  display:flex;align-items:center;gap:5px;
+  background:#fff;border:1px solid var(--border);
+  border-radius:50px;padding:0.22rem 0.7rem;
+  font-size:0.7rem;font-weight:600;color:#16a34a;
+}
+.status-dot{width:6px;height:6px;border-radius:50%;background:#16a34a}
 
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 1.5rem 2rem;
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-muted);
-    max-width: 720px;
-    margin: 0 auto;
-  }
+.about-intro h1{
+  font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;
+  letter-spacing:-0.025em;line-height:1.12;margin-bottom:1rem;
+}
+.about-intro h1 span{color:var(--muted)}
+.about-intro .bio{font-size:0.97rem;color:#374151;line-height:1.8;margin-bottom:0.9rem;max-width:580px}
+.meta-pills{display:flex;flex-wrap:wrap;gap:7px;margin:1.2rem 0 1.5rem}
+.meta-pill{
+  display:inline-flex;align-items:center;gap:5px;
+  border:1px solid var(--border);border-radius:var(--radius-pill);
+  padding:0.28rem 0.82rem;font-size:0.76rem;color:#374151;
+  background:#fafafa;font-weight:500;
+}
 
-  /* CLIENTS */
-  .clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 10px;
-    margin-bottom: 0.5rem;
-  }
-  .client-card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.1rem 1rem;
-    background: var(--white);
-    text-align: center;
-    transition: all 0.2s;
-  }
-  .client-card:hover { background: var(--off-white); border-color: var(--text-primary); }
-  .client-icon { font-size: 24px; margin-bottom: 8px; }
-  .client-name { font-size: 13px; font-weight: 500; color: var(--text-primary); line-height: 1.35; margin-bottom: 4px; }
-  .client-type { font-size: 11px; color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border-light); border-radius: 999px; padding: 2px 8px; display: inline-block; }
+/* CAREER TIMELINE */
+.timeline-section{border-top:1px solid var(--border);padding:4rem 2.5rem;max-width:1080px;margin:0 auto}
+.tl-list{display:flex;flex-direction:column;margin-top:2rem}
+.tl-row{display:grid;grid-template-columns:80px 1px 1fr;gap:0 1.5rem;padding-bottom:2.2rem}
+.tl-row:last-child{padding-bottom:0}
+.tl-year{font-size:0.72rem;font-weight:700;color:var(--muted);text-align:right;padding-top:3px}
+.tl-spine{display:flex;flex-direction:column;align-items:center}
+.tl-dot{width:9px;height:9px;border-radius:50%;background:#111;margin-top:4px;flex-shrink:0}
+.tl-line{flex:1;width:1px;background:var(--border);margin-top:4px}
+.tl-row:last-child .tl-line{display:none}
+.tl-body{padding-top:0}
+.tl-co{
+  display:inline-block;font-size:0.7rem;font-weight:600;
+  background:var(--light);border:1px solid var(--border);
+  border-radius:6px;padding:0.12rem 0.5rem;color:#374151;margin-bottom:0.35rem;
+}
+.tl-body h4{font-size:0.88rem;font-weight:700;color:#111;margin-bottom:0.3rem}
+.tl-body p{font-size:0.81rem;color:var(--gray);line-height:1.65}
 
-  /* TESTIMONIALS */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 1rem;
-  }
-  .testimonials-grid .testimonial-card:last-child:nth-child(odd) {
-    grid-column: span 2;
-    max-width: 50%;
-  }
-  .testimonial-card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
-    background: var(--white);
-    transition: all 0.2s;
-  }
-  .testimonial-card:hover { background: var(--off-white); border-color: var(--text-primary); }
-  .testimonial-stars { color: #f59e0b; font-size: 13px; margin-bottom: 10px; letter-spacing: 1px; }
-  .testimonial-text { font-size: 13px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; font-style: italic; }
-  .testimonial-author { font-size: 13px; font-weight: 500; color: var(--text-primary); }
-  .testimonial-role { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+/* MISSION & VISION */
+.mv-section{border-top:1px solid var(--border);padding:4rem 2.5rem;max-width:1080px;margin:0 auto}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.mv-grid{grid-template-columns:1fr}}
+.mv-card{border:1px solid var(--border);border-radius:var(--radius);padding:2rem}
+.mv-card.mission{border-top:3px solid #111}
+.mv-card.vision{border-top:3px solid var(--muted)}
+.mv-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.85rem}
+.mv-card h3{font-size:1rem;font-weight:800;color:#111;margin-bottom:0.55rem;letter-spacing:-0.01em}
+.mv-card p{font-size:0.83rem;color:var(--gray);line-height:1.75}
 
-  /* REDUCED MOTION */
-  @media (prefers-reduced-motion: reduce) {
-    .fade-up { opacity: 1; transform: none; transition: none; }
-    .skill-fill { transition: none; }
-    .badge-dot { animation: none; }
-  }
+/* VALUES */
+.values-section{border-top:1px solid var(--border);background:#fafafa;padding:4rem 2.5rem}
+.values-inner{max-width:1080px;margin:0 auto}
+.val-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;background:var(--border);gap:1px;margin-top:2rem;
+}
+.val-card{background:#fff;padding:1.5rem;text-align:center}
+.val-em{font-size:1.5rem;margin-bottom:0.55rem;display:block}
+.val-card h4{font-size:0.85rem;font-weight:700;color:#111;margin-bottom:0.3rem}
+.val-card p{font-size:0.77rem;color:var(--muted);line-height:1.6}
 
-  /* MOBILE */
-  @media (max-width: 600px) {
-    nav { padding: 0 1rem; }
-    .nav-links { display: none; }
-    main { padding: 0 1.25rem; }
-    #hero { padding: 96px 0 48px; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .skills-grid, .spec-grid, .testimonials-grid { grid-template-columns: 1fr; }
-    .clients-grid { grid-template-columns: repeat(2, 1fr); }
-    .testimonials-grid .testimonial-card:last-child:nth-child(odd) { grid-column: span 1; max-width: 100%; }
-    .cta-row { flex-direction: column; align-items: flex-start; }
-  }
+/* ABOUT BOTTOM CTA */
+.about-cta{
+  border-top:1px solid var(--border);
+  padding:4rem 2.5rem;text-align:center;max-width:680px;margin:0 auto;
+}
+.about-cta h2{font-size:1.55rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.55rem}
+.about-cta p{color:var(--gray);font-size:0.93rem;margin-bottom:1.75rem}
+.about-cta .row{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--border);padding:1.5rem 2.5rem;text-align:center;color:var(--muted);font-size:0.78rem}
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">Anjani Thota</a>
+  <a class="nav-brand" href="#">Anjani Thota</a>
   <ul class="nav-links">
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#clients">Clients</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#" class="active" onclick="showPage('home',this);return false">Home</a></li>
+    <li><a href="#" onclick="showPage('about',this);return false">About</a></li>
+    <li><a href="#" onclick="showPage('experience',this);return false">Experience</a></li>
+    <li><a href="#" onclick="showPage('skills',this);return false">Skills</a></li>
+    <li><a href="#" onclick="showPage('education',this);return false">Education</a></li>
+    <li><a href="#" onclick="showPage('contact',this);return false">Contact</a></li>
   </ul>
 </nav>
 
-<main>
+<!-- ═══════════════════ HOME ═══════════════════ -->
+<div id="page-home" class="page active">
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="fade-up">
-      <div class="available-badge"><span class="badge-dot"></span> Available for work</div>
-      <h1 class="hero-name">Anjani <em>Thota</em></h1>
-      <p class="hero-role">Digital Marketing Manager &nbsp;·&nbsp; Social Media & Content Strategist<br>Meta & Google Ads Expert &nbsp;·&nbsp; Healthcare & Hospital Branding</p>
-      <p class="hero-bio">Results-driven Digital Marketing Manager with 11+ years of combined experience across healthcare, telecom, and digital sectors. Specialized in creating high-impact online presences for doctors, clinics, and multi-specialty hospitals, driving patient acquisition through Google Ads, SEO, and Social Media strategies.</p>
-      <div class="tag-row">
-        <span class="tag">🎯 Google Ads</span>
-        <span class="tag">📱 Social Media</span>
-        <span class="tag">🔍 SEO</span>
-        <span class="tag">🏥 Healthcare Branding</span>
-        <span class="tag">✍️ Content Writing</span>
-        <span class="tag">📧 Email Marketing</span>
-        <span class="tag">🤝 Lead Generation</span>
-      </div>
-      <div class="cta-row">
-        <a href="mailto:anjanithotaa@gmail.com" class="btn-dark">✉️ Send Email</a>
-        <a href="tel:+919703322559" class="btn-outline">📞 +91 97033 22559</a>
-        <div class="social-row">
-          <a href="https://www.facebook.com/thota.anjani" target="_blank" class="social-btn" title="Facebook">f</a>
-          <a href="https://www.instagram.com/_anji.babu_/" target="_blank" class="social-btn" title="Instagram">in</a>
-        </div>
-      </div>
+  <!-- HERO — unique tagline, NOT repeating the existing hero bio -->
+  <div class="home-hero">
+    <div class="avail-pill">
+      <span class="avail-dot"></span>
+      Open to new client projects
     </div>
+    <h1>
+      Helping doctors &amp; hospitals<br>
+      get found, get trusted,<br>
+      <em>get patients.</em>
+    </h1>
+    <p class="lead">
+      11+ years turning digital channels into patient pipelines — specialising in healthcare brands that need to stand out, earn trust, and grow their practice online.
+    </p>
+    <div class="home-cta-row">
+      <a href="mailto:anjanithotaa@gmail.com" class="btn-dark">✉️ Send Email</a>
+      <a href="tel:+919703322559" class="btn-outline">📞 +91 97033 22559</a>
+    </div>
+  </div>
 
-    <div class="stats-row fade-up" style="transition-delay:0.15s">
-      <div class="stat">
-        <div class="stat-num">11+</div>
-        <div class="stat-label">Years experience</div>
+  <div class="divider"></div>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <p class="eyebrow">What I bring</p>
+    <h2 class="sec-title">Core Services</h2>
+    <p class="sec-sub">Every service is built around one thing — real patient acquisition for healthcare providers.</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-icon">🏥</div>
+        <h3>Healthcare Digital Marketing</h3>
+        <p>Full strategy for doctors, clinics & hospitals — Google My Business, reputation management, and patient-first campaigns.</p>
       </div>
-      <div class="stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Companies</div>
+      <div class="svc-card">
+        <div class="svc-icon">🎯</div>
+        <h3>Google Ads & PPC</h3>
+        <p>Search campaigns with tight targeting and conversion tracking — delivering qualified enquiries at optimised cost per lead.</p>
       </div>
-      <div class="stat">
-        <div class="stat-num">8+</div>
-        <div class="stat-label">Clients served</div>
+      <div class="svc-card">
+        <div class="svc-icon">📱</div>
+        <h3>Social Media Marketing</h3>
+        <p>Facebook & Instagram campaigns with audience segmentation that builds a loyal, engaged patient community over time.</p>
       </div>
-      <div class="stat">
-        <div class="stat-num">8+</div>
-        <div class="stat-label">Core skills</div>
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <h3>SEO & Organic Growth</h3>
+        <p>On-page and off-page SEO using SEMrush, Analytics & Moz — so patients find you without paying per click, every time.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">✍️</div>
+        <h3>Content & Brand Writing</h3>
+        <p>Blog posts, social copy and brand narratives that educate patients and establish long-term authority in your specialty.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📧</div>
+        <h3>Email Marketing & Leads</h3>
+        <p>End-to-end campaigns that nurture enquiries into booked appointments — and keep existing patients coming back.</p>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-eyebrow fade-up">Work experience</div>
-    <div class="exp-list">
+  <div class="divider"></div>
 
-      <div class="exp-item fade-up">
-        <div class="exp-timeline">
-          <div class="exp-dot current"></div>
-          <div class="exp-line"></div>
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <p class="eyebrow">Client feedback</p>
+    <h2 class="sec-title">What people say</h2>
+    <p class="sec-sub">Honest feedback from healthcare professionals and businesses I've worked closely with.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Anjani transformed our clinic's online presence. Within 3 months patient enquiries through Google tripled. His understanding of what healthcare patients actually search for is exceptional."</p>
+        <div class="testi-author">
+          <div class="testi-av">DR</div>
+          <div>
+            <p class="testi-name">Dr. Ramesh K.</p>
+            <p class="testi-role">Orthopedic Surgeon, Hyderabad</p>
+          </div>
         </div>
-        <div class="exp-content">
-          <div class="exp-header">
-            <div class="exp-title">Digital Marketing Manager</div>
-            <span class="exp-current-badge">Current</span>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Our Google Ads were burning budget before Anjani stepped in. He restructured everything — cost per lead dropped 40% while appointment bookings doubled. Highly recommend."</p>
+        <div class="testi-author">
+          <div class="testi-av">SP</div>
+          <div>
+            <p class="testi-name">Suresh P.</p>
+            <p class="testi-role">Admin Director, Multi-Specialty Hospital</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"The blog content Anjani wrote now ranks on Google's first page and genuinely educates our patients. Our brand authority in this region has never been this strong."</p>
+        <div class="testi-author">
+          <div class="testi-av">LM</div>
+          <div>
+            <p class="testi-name">Dr. Lakshmi M.</p>
+            <p class="testi-role">Gynecologist & Women's Clinic Founder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME BOTTOM CTA -->
+  <div style="padding:0 2.5rem">
+    <div class="cta-strip">
+      <h2>Ready to grow your practice online?</h2>
+      <p>Let's build a strategy that brings real patients — not just website traffic.</p>
+      <div class="row">
+        <a href="mailto:anjanithotaa@gmail.com" class="btn-white">✉️ Email Me</a>
+        <a href="tel:+919703322559" class="btn-ghost">📞 Call Now</a>
+        <a href="https://www.facebook.com/thota.anjani" target="_blank" class="btn-ghost">Facebook</a>
+        <a href="https://www.instagram.com/_anji.babu_/" target="_blank" class="btn-ghost">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<div id="page-about" class="page">
+  <div class="about-wrap">
+
+    <!-- PHOTO + FRESH BIO — zero repeat of hero section content -->
+    <div class="about-top">
+      <div>
+        <div class="photo-box">
+          <div class="photo-initials">AT</div>
+          <p class="photo-name-label">Anjani Thota</p>
+          <p class="photo-sub-label">Add your photo here</p>
+          <div class="photo-status">
+            <span class="status-dot"></span>
+            Available
+          </div>
+        </div>
+      </div>
+      <div class="about-intro">
+        <p class="eyebrow" style="margin-bottom:0.5rem">The person behind the campaigns</p>
+        <h1>Marketer by skill,<br><span>storyteller by heart.</span></h1>
+        <p class="bio">
+          I grew up understanding people — first as a telecom professional guiding customers through network decisions, then as a sales specialist who learned that the best leads come from genuine trust.
+        </p>
+        <p class="bio">
+          That human foundation is why my campaigns feel honest, not pushy — and why the results tend to compound over time rather than peak and fade.
+        </p>
+        <div class="meta-pills">
+          <span class="meta-pill">📍 Rajahmundry, AP</span>
+          <span class="meta-pill">🎓 B.Com — Acharya Nagarjuna University</span>
+          <span class="meta-pill">🏆 Google Ads Certified</span>
+          <span class="meta-pill">💼 He / Him</span>
+        </div>
+        <a href="mailto:anjanithotaa@gmail.com" class="btn-dark">✉️ Work with me</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CAREER TIMELINE — fresh storytelling, not repeating experience section -->
+    <div class="timeline-section">
+      <p class="eyebrow">Career journey</p>
+      <h2 class="sec-title">How I got here</h2>
+      <p class="sec-sub" style="margin-bottom:0">11 years of building the skills that make campaigns actually work.</p>
+      <div class="tl-list">
+        <div class="tl-row">
+          <div class="tl-year">2011–12</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <span class="tl-co">Vajja Technologies</span>
+            <h4>Learning to listen first</h4>
+            <p>Started as a Customer Care Executive in telecom. Learned that every conversation is a chance to build trust — a principle that still drives every campaign I run today.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2014–19</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <span class="tl-co">QConneqt — Tata BSS</span>
+            <h4>Mastering the art of the lead</h4>
+            <p>Generated up to 30 qualified leads per day through persuasive, value-driven selling. Discovered that relevance always beats volume — and relevance requires truly understanding the person you're speaking to.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2019</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <span class="tl-co">Creative Crewz</span>
+            <h4>The pivot that changed everything</h4>
+            <p>Completed hands-on training in SEO, Google Ads, SMM & email marketing. Realised I could apply a decade of human-centred thinking to digital channels — and never looked back.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2021–22</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <span class="tl-co">ONS Solutions</span>
+            <h4>Full-stack digital execution</h4>
+            <p>Managed web analytics, email campaigns, social ads and display simultaneously — building a complete, end-to-end digital marketing skill set across multiple client industries.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2024</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <span class="tl-co">TheRiseUp Solutions</span>
+            <h4>Content meets performance</h4>
+            <p>Drove SEO content writing alongside SEM and Google Ads campaigns — learning how to make compelling storytelling and measurable paid performance reinforce each other.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-year">2025–Now</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <span class="tl-co">QTOP Global Services</span>
+            <h4>Healthcare digital — full focus</h4>
+            <p>Entirely focused on what I do best: building high-impact digital presences for doctors, clinics and hospitals across Rajahmundry and beyond. Every campaign is measured by real patient outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- MISSION & VISION -->
+    <div class="mv-section">
+      <p class="eyebrow">Purpose</p>
+      <h2 class="sec-title">Mission & Vision</h2>
+      <p class="sec-sub">Why I do what I do — and where I'm headed.</p>
+      <div class="mv-grid">
+        <div class="mv-card mission">
+          <p class="mv-tag">Mission</p>
+          <h3>Make every good doctor discoverable</h3>
+          <p>Bridge the gap between skilled healthcare professionals and the patients who need them — through honest, data-driven marketing that builds real visibility and lasting trust, not just impressions.</p>
+        </div>
+        <div class="mv-card vision">
+          <p class="mv-tag">Vision</p>
+          <h3>A stronger digital ecosystem for healthcare</h3>
+          <p>A future where every clinic — from a solo practitioner in a small town to a multi-specialty hospital in a city — has a credible online presence that truly reflects the quality of care they provide.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <div class="values-section">
+      <div class="values-inner">
+        <p class="eyebrow">What I stand for</p>
+        <h2 class="sec-title">Core values</h2>
+        <div class="val-grid">
+          <div class="val-card">
+            <span class="val-em">🤝</span>
+            <h4>Integrity first</h4>
+            <p>Transparent strategies, honest reporting — no vanity metrics, only results that matter to the business.</p>
+          </div>
+          <div class="val-card">
+            <span class="val-em">📊</span>
+            <h4>Data-driven</h4>
+            <p>Every decision backed by analytics. Numbers guide the strategy; creativity executes it.</p>
+          </div>
+          <div class="val-card">
+            <span class="val-em">🏥</span>
+            <h4>Patient-centric</h4>
+            <p>Healthcare marketing must be empathetic — I always think about the patient on the other end of the screen.</p>
+          </div>
+          <div class="val-card">
+            <span class="val-em">🚀</span>
+            <h4>Always learning</h4>
+            <p>Digital evolves daily. I stay ahead through certifications, constant testing and genuine curiosity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT BOTTOM CTA -->
+    <div class="about-cta">
+      <h2>Let's work together</h2>
+      <p>Looking for a Digital Marketing Manager who understands healthcare inside-out? Let's connect.</p>
+      <div class="row">
+        <a href="mailto:anjanithotaa@gmail.com" class="btn-dark">✉️ anjanithotaa@gmail.com</a>
+        <a href="tel:+919703322559" class="btn-outline">📞 +91 97033 22559</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+<div id="page-experience" class="page">
+  <div class="exp-wrap">
+    <section class="section">
+      <p class="eyebrow">Career Journey</p>
+      <h2 class="sec-title">Work Experience</h2>
+      <p class="sec-sub">11+ years across telecom, sales, and digital marketing — each role building on the last.</p>
+      <div class="exp-list">
+
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Digital Marketing Manager</span>
+            <span class="exp-badge">● Current</span>
           </div>
           <div class="exp-company">QTOP Global Services · Full-time</div>
-          <div class="exp-date">Aug 2025 – Present · 11 months · Rajahmundry, On-site</div>
-          <div class="exp-desc">Creating high-impact digital presences for doctors, clinics, and multi-specialty hospitals. Driving patient acquisition through targeted Google Ads, Social Media campaigns, and healthcare-specific content strategies.</div>
-          <div class="chip-row">
-            <span class="chip">Google Ads</span>
-            <span class="chip">Social Media Marketing</span>
-            <span class="chip">Healthcare Branding</span>
-            <span class="chip">Content Strategy</span>
+          <div class="exp-meta">📅 Aug 2025 – Present · 11 months &nbsp;|&nbsp; 📍 Rajahmundry, On-site</div>
+          <p class="exp-desc">Creating high-impact digital presences for doctors, clinics, and multi-specialty hospitals. Driving patient acquisition through targeted Google Ads, Social Media campaigns, and healthcare-specific content strategies.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Google Ads</span>
+            <span class="exp-tag">Social Media Marketing</span>
+            <span class="exp-tag">Healthcare Branding</span>
+            <span class="exp-tag">Content Strategy</span>
           </div>
         </div>
-      </div>
 
-      <div class="exp-item fade-up">
-        <div class="exp-timeline">
-          <div class="exp-dot"></div>
-          <div class="exp-line"></div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Digital Marketing Specialist</div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Digital Marketing Specialist</span>
+          </div>
           <div class="exp-company">TheRiseUp Solutions</div>
-          <div class="exp-date">Apr 2024 – Sep 2024 · 6 months · Rajahmundry</div>
-          <div class="exp-desc">Drove digital campaigns, SEO content writing for client blogs, SEM, Google Ads, and Social Media Marketing. Worked on theriseupsolutions.com &amp; harishhub.com.</div>
-          <div class="chip-row">
-            <span class="chip">Content Writing</span>
-            <span class="chip">Facebook Marketing</span>
-            <span class="chip">Google Ads</span>
-            <span class="chip">SEM</span>
-            <span class="chip">SEMrush</span>
+          <div class="exp-meta">📅 Apr 2024 – Sep 2024 · 6 months &nbsp;|&nbsp; 📍 India</div>
+          <p class="exp-desc">Drove digital campaigns, SEO content writing for client blogs (theriseupsolutions.com & harishhub.com), SEM, Google Ads, and Social Media Marketing.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Content Writing</span>
+            <span class="exp-tag">Facebook Marketing</span>
+            <span class="exp-tag">Google Ads</span>
+            <span class="exp-tag">SEM</span>
+            <span class="exp-tag">SEMrush</span>
           </div>
         </div>
-      </div>
 
-      <div class="exp-item fade-up">
-        <div class="exp-timeline">
-          <div class="exp-dot"></div>
-          <div class="exp-line"></div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Digital Marketing Executive</div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Digital Marketing Executive</span>
+          </div>
           <div class="exp-company">ONS Solutions · Full-time</div>
-          <div class="exp-date">Oct 2021 – Dec 2022 · 1 yr 3 months · Hyderabad</div>
-          <div class="exp-desc">Used web analytics tools to evaluate website traffic and boost marketing efforts. Managed email marketing, social media, and display ads while assessing new digital technologies.</div>
-          <div class="chip-row">
-            <span class="chip">Web Analytics</span>
-            <span class="chip">Email Marketing</span>
-            <span class="chip">Social Media Ads</span>
-            <span class="chip">Display Ads</span>
+          <div class="exp-meta">📅 Oct 2021 – Dec 2022 · 1 yr 3 months &nbsp;|&nbsp; 📍 Hyderabad</div>
+          <p class="exp-desc">Used web analytics tools to evaluate website traffic and boost marketing efforts. Managed email marketing, social media, and display ads while assessing new digital technologies.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Web Analytics</span>
+            <span class="exp-tag">Email Marketing</span>
+            <span class="exp-tag">Social Media Ads</span>
+            <span class="exp-tag">Display Ads</span>
           </div>
         </div>
-      </div>
 
-      <div class="exp-item fade-up">
-        <div class="exp-timeline">
-          <div class="exp-dot"></div>
-          <div class="exp-line"></div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">SEO Executive (Apprenticeship)</div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">SEO Executive</span>
+            <span style="font-size:0.7rem;color:var(--muted);background:var(--light);border:1px solid var(--border);padding:0.18rem 0.6rem;border-radius:50px;">Apprenticeship</span>
+          </div>
           <div class="exp-company">Creative Crewz</div>
-          <div class="exp-date">Jun 2019 – Aug 2019 · 3 months · Hyderabad, On-site</div>
-          <div class="exp-desc">Hands-on training in SEO, SMM, Google Ads, Email Marketing, and Lead Generation fundamentals.</div>
-          <div class="chip-row">
-            <span class="chip">SEO</span>
-            <span class="chip">SMM</span>
-            <span class="chip">Google Ads</span>
-            <span class="chip">Lead Generation</span>
+          <div class="exp-meta">📅 Jun 2019 – Aug 2019 · 3 months &nbsp;|&nbsp; 📍 Hyderabad, On-site</div>
+          <p class="exp-desc">Hands-on training in SEO, SMM, Google Ads, Email Marketing, and Lead Generation fundamentals. The turning point that launched a focused digital career.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">SEO</span>
+            <span class="exp-tag">SMM</span>
+            <span class="exp-tag">Google Ads</span>
+            <span class="exp-tag">Lead Generation</span>
           </div>
         </div>
-      </div>
 
-      <div class="exp-item fade-up">
-        <div class="exp-timeline">
-          <div class="exp-dot"></div>
-          <div class="exp-line"></div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Customer Service Representative</div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Customer Service Representative</span>
+          </div>
           <div class="exp-company">QConneqt — Tata Business Support Services · Full-time</div>
-          <div class="exp-date">Dec 2014 – Jun 2019 · 4 yrs 6 months · Hyderabad, On-site</div>
-          <div class="exp-desc">Outbound sales specialist presenting 1-year promotional packages. Consistently generated up to 30 leads per day through persuasive communication and value-driven selling.</div>
-          <div class="chip-row">
-            <span class="chip">Lead Generation</span>
-            <span class="chip">Inside Sales</span>
-            <span class="chip">Objection Handling</span>
-            <span class="chip">Customer Engagement</span>
+          <div class="exp-meta">📅 Dec 2014 – Jun 2019 · 4 yrs 6 months &nbsp;|&nbsp; 📍 Hyderabad, On-site</div>
+          <p class="exp-desc">Outbound sales specialist presenting 1-year promotional packages. Consistently generated up to 30 leads per day through persuasive communication and value-driven selling.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Lead Generation</span>
+            <span class="exp-tag">Inside Sales</span>
+            <span class="exp-tag">Objection Handling</span>
+            <span class="exp-tag">Customer Engagement</span>
           </div>
         </div>
-      </div>
 
-      <div class="exp-item fade-up">
-        <div class="exp-timeline">
-          <div class="exp-dot"></div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-title">Customer Care Executive</div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <span class="exp-role">Customer Care Executive</span>
+          </div>
           <div class="exp-company">Vajja Technologies Pvt. Ltd. · Full-time</div>
-          <div class="exp-date">May 2011 – May 2012 · 1 yr 1 month · Hyderabad, On-site</div>
-          <div class="exp-desc">Telecom specialist focused on Mobile Number Portability (MNP), educating customers on network switching benefits and driving conversions through consultative calling.</div>
-          <div class="chip-row">
-            <span class="chip">Customer Retention</span>
-            <span class="chip">Telecom</span>
-            <span class="chip">MNP</span>
-            <span class="chip">Outbound Calling</span>
+          <div class="exp-meta">📅 May 2011 – May 2012 · 1 yr 1 month &nbsp;|&nbsp; 📍 Hyderabad, On-site</div>
+          <p class="exp-desc">Telecom specialist focused on Mobile Number Portability (MNP) — educating customers on network switching benefits and driving conversions through consultative calling.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Customer Retention</span>
+            <span class="exp-tag">Telecom</span>
+            <span class="exp-tag">MNP</span>
+            <span class="exp-tag">Outbound Calling</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════ SKILLS ═══════════════════ -->
+<div id="page-skills" class="page">
+  <div class="skills-wrap">
+    <section class="section">
+      <p class="eyebrow">Expertise</p>
+      <h2 class="sec-title">Core Skills</h2>
+      <p class="sec-sub">A skill set built over 11+ years — sharpened across healthcare, telecom, and digital sectors.</p>
+
+      <div class="skills-block">
+        <p class="skills-block-title">Digital Marketing</p>
+        <div class="skill-bars">
+          <div class="skill-row">
+            <span class="skill-name">🎯 Google Ads</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div>
+            <span class="skill-pct">Expert</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">📱 Social Media</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div>
+            <span class="skill-pct">Expert</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">🤝 Lead Generation</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div>
+            <span class="skill-pct">Expert</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">🔍 SEO</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+            <span class="skill-pct">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">✍️ Content Writing</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+            <span class="skill-pct">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">📧 Email Marketing</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div>
+            <span class="skill-pct">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">📊 Google Analytics</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div>
+            <span class="skill-pct">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">🛠️ SEMrush & Moz</span>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div>
+            <span class="skill-pct">Intermediate</span>
           </div>
         </div>
       </div>
 
-    </div>
-  </section>
+      <div class="divider" style="margin:2.5rem 0"></div>
 
-  <!-- SPECIALIZATIONS -->
-  <section id="specializations">
-    <div class="section-eyebrow fade-up">Specializations</div>
-    <div class="spec-grid">
-      <div class="spec-card fade-up">
-        <span class="spec-icon">🏥</span>
-        <div class="spec-title">Healthcare digital marketing</div>
-        <div class="spec-desc">Building digital strategies for doctors, clinics &amp; hospitals, including Google My Business, patient acquisition ads, and trust-building content tailored to healthcare audiences.</div>
-      </div>
-      <div class="spec-card fade-up">
-        <span class="spec-icon">📢</span>
-        <div class="spec-title">Paid advertising, Meta &amp; Google</div>
-        <div class="spec-desc">Running high-ROI Google Ads & Facebook/Instagram campaigns with targeted audience segmentation, conversion tracking, and budget optimization.</div>
-      </div>
-      <div class="spec-card fade-up">
-        <span class="spec-icon">✍️</span>
-        <div class="spec-title">Content writing &amp; brand storytelling</div>
-        <div class="spec-desc">Crafting SEO-optimized blog content, social media copy, and brand narratives that engage audiences and build lasting online presence.</div>
-      </div>
-      <div class="spec-card fade-up">
-        <span class="spec-icon">🔍</span>
-        <div class="spec-title">SEO & organic growth</div>
-        <div class="spec-desc">On-page and off-page SEO using SEMrush, Google Analytics, and Moz to improve rankings and drive qualified organic traffic.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CLIENTS -->
-  <section id="clients">
-    <div class="section-eyebrow fade-up">Doctors &amp; Hospitals I've worked with</div>
-    <p class="fade-up" style="font-size:14px;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.65">Built and managed the digital presence of these healthcare professionals and hospitals in Rajahmundry.</p>
-    <div class="clients-grid">
-      <div class="client-card fade-up">
-        <div class="client-icon">👩‍⚕️</div>
-        <div class="client-name">Dr. Kavitha Gogineni</div>
-        <div class="client-type">Doctor</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">👨‍⚕️</div>
-        <div class="client-name">Dr. Venkatesh Kolla</div>
-        <div class="client-type">Doctor</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">🏥</div>
-        <div class="client-name">Rajahmundry Orthopedic &amp; Vascular</div>
-        <div class="client-type">Hospital</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">🏥</div>
-        <div class="client-name">Veda Hospitals</div>
-        <div class="client-type">Hospital</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">🏥</div>
-        <div class="client-name">Geeta Hospital</div>
-        <div class="client-type">Hospital</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">🏥</div>
-        <div class="client-name">Swapnika Gastro &amp; Liver Care</div>
-        <div class="client-type">Hospital</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">🏥</div>
-        <div class="client-name">Raju Neuro Multispecialty</div>
-        <div class="client-type">Hospital</div>
-      </div>
-      <div class="client-card fade-up">
-        <div class="client-icon">🏥</div>
-        <div class="client-name">Sri Rama Chandra Hospital</div>
-        <div class="client-type">Hospital</div>
-      </div>
-    </div>
-
-    <div class="section-eyebrow fade-up" style="margin-top:2.5rem">What clients say</div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Our clinic's patient inquiries increased significantly after Anjani took over our social media and Google Ads. Highly professional and results-driven."</div>
-        <div class="testimonial-author">Dr. Ramesh K.</div>
-        <div class="testimonial-role">Orthopedic Surgeon, Rajahmundry</div>
-      </div>
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Anjani understands healthcare marketing deeply. Our hospital's online presence and new patient walk-ins have grown tremendously."</div>
-        <div class="testimonial-author">Dr. Priya S.</div>
-        <div class="testimonial-role">Gastroenterologist, Rajahmundry</div>
-      </div>
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Very responsive and creative. The content strategy he built for us perfectly connects with our local patient audience."</div>
-        <div class="testimonial-author">Hospital Admin, Veda Hospitals</div>
-        <div class="testimonial-role">Rajahmundry</div>
-      </div>
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"From zero online presence to hundreds of followers and daily inquiries, Anjani transformed our digital identity completely."</div>
-        <div class="testimonial-author">Dr. Suresh M.</div>
-        <div class="testimonial-role">Neurologist, Rajahmundry</div>
-      </div>
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Excellent understanding of Google Ads and Meta campaigns. Our ROI improved within the first month of working with him."</div>
-        <div class="testimonial-author">Dr. Anitha R.</div>
-        <div class="testimonial-role">General Physician, Rajahmundry</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-eyebrow fade-up">Core skills</div>
-    <div class="skills-grid" id="skillsGrid">
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">Google Ads</span><span class="skill-level">Expert</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">Social Media Marketing</span><span class="skill-level">Expert</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">SEO</span><span class="skill-level">Advanced</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">Content Writing</span><span class="skill-level">Advanced</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">Lead Generation</span><span class="skill-level">Expert</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">Email Marketing</span><span class="skill-level">Advanced</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">Google Analytics</span><span class="skill-level">Advanced</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-      </div>
-      <div class="skill-card fade-up">
-        <div class="skill-header"><span class="skill-name">SEMrush & Moz</span><span class="skill-level">Intermediate</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-w="65"></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <div class="section-eyebrow fade-up">Certifications</div>
-    <div class="cert-list">
-      <div class="cert-item fade-up">
-        <div class="cert-icon">🎓</div>
-        <div>
-          <div class="cert-name">SEO Career Kickstarter</div>
-          <div class="cert-issuer">Professional Certification</div>
+      <div class="skills-block">
+        <p class="skills-block-title">Specialisations</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
+          <div style="border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;background:#fafafa">
+            <div style="font-size:1.4rem;margin-bottom:0.5rem">🏥</div>
+            <div style="font-size:0.88rem;font-weight:700;color:#111;margin-bottom:0.3rem">Healthcare Digital Marketing</div>
+            <div style="font-size:0.78rem;color:var(--gray);line-height:1.6">Building digital strategies for doctors, clinics & hospitals — Google My Business, patient acquisition ads, and trust-building content.</div>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;background:#fafafa">
+            <div style="font-size:1.4rem;margin-bottom:0.5rem">📢</div>
+            <div style="font-size:0.88rem;font-weight:700;color:#111;margin-bottom:0.3rem">Paid Advertising — Meta & Google</div>
+            <div style="font-size:0.78rem;color:var(--gray);line-height:1.6">High-ROI campaigns with targeted audience segmentation, conversion tracking, and budget optimisation.</div>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;background:#fafafa">
+            <div style="font-size:1.4rem;margin-bottom:0.5rem">✍️</div>
+            <div style="font-size:0.88rem;font-weight:700;color:#111;margin-bottom:0.3rem">Content & Brand Storytelling</div>
+            <div style="font-size:0.78rem;color:var(--gray);line-height:1.6">SEO-optimised blog content, social copy, and brand narratives that engage audiences and build lasting online presence.</div>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;background:#fafafa">
+            <div style="font-size:1.4rem;margin-bottom:0.5rem">🔍</div>
+            <div style="font-size:0.88rem;font-weight:700;color:#111;margin-bottom:0.3rem">SEO & Organic Growth</div>
+            <div style="font-size:0.78rem;color:var(--gray);line-height:1.6">On-page and off-page SEO using SEMrush, Google Analytics, and Moz to improve rankings and drive qualified organic traffic.</div>
+          </div>
         </div>
       </div>
-      <div class="cert-item fade-up">
-        <div class="cert-icon">🎯</div>
-        <div>
-          <div class="cert-name">Google Ads Creative Certification</div>
-          <div class="cert-issuer">Google</div>
+
+      <div class="divider" style="margin:2.5rem 0"></div>
+
+      <div class="skills-block">
+        <p class="skills-block-title">Certifications</p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">🎓</div>
+            <div>
+              <div class="cert-name">SEO Career Kickstarter</div>
+              <div class="cert-body">Professional Certification</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🎯</div>
+            <div>
+              <div class="cert-name">Google Ads Creative Certification</div>
+              <div class="cert-body">Google</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="section-eyebrow fade-up">Education</div>
-    <div class="edu-list">
-      <div class="edu-item fade-up">
-        <div class="edu-icon">🎓</div>
-        <div>
+    </section>
+  </div>
+</div>
+
+<!-- ═══════════════════ EDUCATION ═══════════════════ -->
+<div id="page-education" class="page">
+  <div class="edu-wrap">
+    <section class="section">
+      <p class="eyebrow">Academic Background</p>
+      <h2 class="sec-title">Education</h2>
+      <p class="sec-sub">Academic foundation combined with continuous professional learning in digital marketing.</p>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
           <div class="edu-degree">B.Com (Open Degree)</div>
-          <div class="edu-school">Acharya Nagarjuna University</div>
-          <div class="edu-year">Completed March 2023</div>
+          <div class="edu-inst">Acharya Nagarjuna University</div>
+          <div class="edu-year">📅 Completed March 2023</div>
+          <div class="edu-detail">Bachelor of Commerce — completed through open degree program while building a full-time professional career in digital marketing.</div>
         </div>
-      </div>
-      <div class="edu-item fade-up">
-        <div class="edu-icon">📚</div>
-        <div>
+        <div class="edu-card">
+          <div class="edu-icon">📚</div>
           <div class="edu-degree">Intermediate — MPC</div>
-          <div class="edu-school">Board of Intermediate Education</div>
-          <div class="edu-year">2005 · Math, Physics & Chemistry · 62%</div>
+          <div class="edu-inst">Board of Intermediate Education</div>
+          <div class="edu-year">📅 2005</div>
+          <div class="edu-detail">Math, Physics & Chemistry · 62% — strong analytical foundation that informs a data-driven approach to marketing.</div>
         </div>
-      </div>
-      <div class="edu-item fade-up">
-        <div class="edu-icon">🏫</div>
-        <div>
+        <div class="edu-card">
+          <div class="edu-icon">🏫</div>
           <div class="edu-degree">S.S.C</div>
-          <div class="edu-school">School of Secondary Education</div>
-          <div class="edu-year">2002 · 68%</div>
+          <div class="edu-inst">School of Secondary Education</div>
+          <div class="edu-year">📅 2002</div>
+          <div class="edu-detail">Secondary School Certificate · 68%</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+</div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="fade-up">
-      <div class="section-eyebrow">Let's work together</div>
-      <h2 class="contact-heading">Looking for a results-driven<br>Digital Marketing Manager?</h2>
-      <p class="contact-sub">Deep expertise in healthcare, Google Ads, and social media. Based in Rajahmundry — available for on-site and remote opportunities.</p>
-    </div>
-    <div class="contact-card fade-up">
-      <div class="contact-row">
-        <div class="contact-label"><span>✉️</span> Email</div>
-        <a href="mailto:anjanithotaa@gmail.com" class="contact-val">anjanithotaa@gmail.com</a>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label"><span>📞</span> Phone</div>
-        <a href="tel:+919703322559" class="contact-val">+91 97033 22559</a>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label"><span>📍</span> Location</div>
-        <span class="contact-val">Rajahmundry, Andhra Pradesh</span>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label"><span>👥</span> Facebook</div>
-        <a href="https://www.facebook.com/thota.anjani" target="_blank" class="contact-val">thota.anjani</a>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label"><span>📸</span> Instagram</div>
-        <a href="https://www.instagram.com/_anji.babu_/" target="_blank" class="contact-val">_anji.babu_</a>
-      </div>
-    </div>
-    <div class="contact-cta fade-up">
-      <a href="mailto:anjanithotaa@gmail.com" class="btn-dark">✉️ Send Email</a>
-      <a href="tel:+919703322559" class="btn-outline">📞 Call Now</a>
-    </div>
-  </section>
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<div id="page-contact" class="page">
+  <div class="contact-wrap">
+    <section class="section">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="sec-title">Let's Work Together</h2>
+      <p class="sec-sub">Looking for a results-driven Digital Marketing Manager with deep expertise in healthcare, Google Ads, and social media? Let's connect!</p>
 
-</main>
+      <div class="contact-grid">
+        <a href="mailto:anjanithotaa@gmail.com" class="contact-card" style="text-decoration:none;color:inherit">
+          <div class="c-icon">✉️</div>
+          <div class="c-label">Email</div>
+          <div class="c-value">anjanithotaa@gmail.com</div>
+          <div class="c-action">Click to send an email →</div>
+        </a>
+        <a href="tel:+919703322559" class="contact-card" style="text-decoration:none;color:inherit">
+          <div class="c-icon">📞</div>
+          <div class="c-label">Phone</div>
+          <div class="c-value">+91 97033 22559</div>
+          <div class="c-action">Click to call →</div>
+        </a>
+        <a href="https://www.facebook.com/thota.anjani" target="_blank" class="contact-card" style="text-decoration:none;color:inherit">
+          <div class="c-icon">👤</div>
+          <div class="c-label">Facebook</div>
+          <div class="c-value">thota.anjani</div>
+          <div class="c-action">View Facebook profile →</div>
+        </a>
+        <a href="https://www.instagram.com/_anji.babu_/" target="_blank" class="contact-card" style="text-decoration:none;color:inherit">
+          <div class="c-icon">📸</div>
+          <div class="c-label">Instagram</div>
+          <div class="c-value">@_anji.babu_</div>
+          <div class="c-action">View Instagram profile →</div>
+        </a>
+        <div class="contact-card">
+          <div class="c-icon">📍</div>
+          <div class="c-label">Location</div>
+          <div class="c-value">Rajahmundry, Andhra Pradesh</div>
+          <div class="c-action">Available for remote & on-site</div>
+        </div>
+      </div>
 
-<footer>
-  © 2026 Anjani Thota · Digital Marketing Manager · Rajahmundry, Andhra Pradesh, India
-</footer>
+      <div class="contact-form-box">
+        <h3>Send a Message</h3>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="e.g. Dr. Ramesh Kumar">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="e.g. Healthcare marketing inquiry">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your clinic or hospital and what you're looking to achieve..."></textarea>
+        </div>
+        <a href="mailto:anjanithotaa@gmail.com" class="btn-dark">✉️ Send via Email</a>
+      </div>
+
+    </section>
+  </div>
+</div>
+
+<footer>© 2026 Anjani Thota · Digital Marketing Manager · Rajahmundry, Andhra Pradesh, India</footer>
 
 <script>
-  // Intersection Observer for fade-up animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-
-        // Animate skill bars when skills section visible
-        if (entry.target.closest('#skills') || entry.target.id === 'skillsGrid') {
-          setTimeout(() => {
-            document.querySelectorAll('.skill-fill').forEach(bar => {
-              bar.style.width = bar.dataset.w + '%';
-            });
-          }, 200);
-        }
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // Also trigger skills animation when any skill card is visible
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          document.querySelectorAll('.skill-fill').forEach(bar => {
-            bar.style.width = bar.dataset.w + '%';
-          });
-        }, 300);
-        skillObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.2 });
-
-  const skillsSection = document.getElementById('skills');
-  if (skillsSection) skillObserver.observe(skillsSection);
-
-  // Trigger hero immediately
-  setTimeout(() => {
-    document.querySelectorAll('#hero .fade-up').forEach(el => {
-      el.classList.add('visible');
-    });
-  }, 100);
-
-  // Nav active link highlight on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 80;
-      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
-    });
-    navLinks.forEach(link => {
-      link.style.color = link.getAttribute('href') === '#' + current
-        ? 'var(--text-primary)' : '';
-    });
-  });
+function showPage(id, el) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  if (el) el.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 </script>
-
 </body>
 </html>
